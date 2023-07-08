@@ -1,0 +1,16 @@
+.navlinks{
+    background-color: blueviolet;
+    align-items: start;
+}
+
+.user-icon{
+    border-radius: 50%;
+    padding: 5px 10px 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.nav-item .nav-link {
+  color:rgb(197, 197, 197);
+  font-weight:700;
+}
