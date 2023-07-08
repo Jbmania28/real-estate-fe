@@ -4,13 +4,15 @@ import validation from '../LoginValidation';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
+import { Modal } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 export default function Login() {
   const [user, setUser] = useState({
     email: '',
     password: ''
   })
+  const[show,setShow] = useState();
   const navigate = useNavigate();
   const [err, setErr] = useState([]);
   const [backendErr, setBackendErr] = useState([]);
@@ -18,7 +20,8 @@ export default function Login() {
   const handleInput = (event) => {
     setUser(prev => ({ ...prev, [event.target.name]: [event.target.value] }))
   }
-
+ 
+  const handleClose =()=> setShow(false);
   const handleSubmit = (event) => {
     event.preventDefault();
     debugger;
@@ -38,7 +41,7 @@ export default function Login() {
               localStorage.setItem("id", res.data.data[0].id)
               navigate('/');
             } else {
-              alert("Invalid username or password");
+              setShow(true);
             }
           }
 
@@ -74,6 +77,19 @@ export default function Login() {
               </div>
               <button type="submit" className="btn btn-primary " style={{"backgroundColor":"rgb(4, 4, 229)"}}>Submit</button>
               <span className='ps-3'>New user ? <Link to="/signup" style={{ color: "rgb(4, 4, 229)" }}>Sign up</Link></span>
+
+               {/* Login error popup */}
+               <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>Login error</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>Invalid user name or password</Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="primary"  style={{"padding":"5px 20px 5px","backgroundColor":"rgb(4, 4, 229)"}} onClick={handleClose}>
+                      Ok
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
             </form>
           </div>
         </div>

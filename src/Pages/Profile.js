@@ -51,7 +51,11 @@ export default function Profile() {
                 </div>
                 
                 <div class="text-center mt-3">
-                    <span class="bg-secondary p-1 px-4 rounded text-white">Admin</span>
+                    <span class="bg-secondary p-1 px-4 rounded text-white">
+                       {
+                         fname === 'jayesh' ? 'Admin' : 'User'
+                       }
+                        </span>
                     <h5 class="m-3">{fname} {lname}</h5>
                     <span>Software Engineer</span>
                     

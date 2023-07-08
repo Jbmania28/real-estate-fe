@@ -12,9 +12,15 @@ import value from '../assets/value.png'
 import contact from '../assets/contact.jpg'
 import { Button, Col, Container, Form, Row } from "react-bootstrap"
 import axios from 'axios'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 import { useNavigate } from 'react-router-dom'
+import { Pagination } from 'swiper'
+import { EffectCoverflow } from 'swiper'
 export default function Dashboard() {
-  const navigate = useNavigate();
+
   // useEffect(()=>{
   //   axios.get('http://localhost:5000')
   //   .then(res =>{
@@ -71,7 +77,7 @@ export default function Dashboard() {
             </div>
           </div>
           <div className="col-md-6 text-center">
-            <img src={hero} alt="hero-image" height="550px" width="440px" className='banner-img ' />
+            <img src={hero} alt="hero-image" height="550px" width="450px" className='banner-img ' />
           </div>
         </div>
       </div>
@@ -105,6 +111,7 @@ export default function Dashboard() {
 
           </div>
         </div>
+        
         <div className="row mt-4 p-3 residencies">
           <div className="col-md-2 mt-md-0 mt-2">
             <div class="card" style={{ width: "18rem;" }}>
