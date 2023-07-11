@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../Style/contact.css'
-import validation from '../contactValidation'
+import validation from '../Validations/contactValidation'
 import axios from 'axios'
 import { Modal } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'

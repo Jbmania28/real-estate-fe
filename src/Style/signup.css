@@ -90,3 +90,43 @@
     --bs-btn-hover-color:rgb(4, 4, 229);
     
 }
+
+#signup-dropdowns .btn-secondary{ 
+	--bs-btn-bg:#fff;
+	--bs-btn-border-color:#dfdede;
+	--bs-btn-hover-border-color:#dfdede; 
+	--bs-btn-color:#5e5b5b;
+	--bs-btn-hover-color:#5e5b5b;
+	--bs-btn-hover-bg:#fff;
+	--bs-btn-active-bg: rgb(4, 4, 229);
+	--bs-btn-active-color: #fff;
+}
+
+#signup-dropdowns .row div:first-child{
+	padding-right: 2px !important;
+	padding-left: 6px !important;
+}
+
+#signup-dropdowns .btn{
+	text-align: left !important;
+	--bs-btn-padding-y: 0.5rem;
+	width: 100% !important;
+}
+
+#signup-dropdowns .dropdown-item {
+	text-decoration: none;
+	color: #5e5b5b !important;
+	
+
+
+}
+#signup-dropdowns .dropdown-menu{
+	--bs-dropdown-link-active-bg:none;
+	--bs-dropdown-link-hover-bg:#e2e2e2;
+
+} 
+
+
+.signup-form .btn{
+	font-weight:400;
+}

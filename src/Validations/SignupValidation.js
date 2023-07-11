@@ -18,7 +18,28 @@ function validation(values){
     else{
         err.lname = ""
     }
-
+    if(values.address === "")
+    {
+        err.address="Please enter address"
+    }
+    else{
+        err.address = ""
+    }
+    if(values.gender === "")
+    {
+        err.gender="Please select gender"
+    }
+    else{
+        err.gender = ""
+    }
+    if(values.residence === "")
+    {
+        err.residence="Please select residence"
+    }
+    else{
+        err.residence = ""
+    }
+     
     if(values.email === "")
     {
         err.email="Email should not be empty"

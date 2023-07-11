@@ -1,7 +1,6 @@
 
 .card{
     border:none;
-
     position:relative;
     overflow:hidden;
     border-radius:8px;
@@ -61,8 +60,9 @@
 
 .buttons button:nth-child(1){
        border:1px solid rgb(3, 3, 121) !important;
-       color:rgb(3, 3, 121);
+       color:rgb(255, 255, 255);
        height:40px;
+       background-color:rgb(3, 3, 121);
 }
 
 .buttons button:nth-child(1):hover{
@@ -80,3 +80,12 @@
 }
 
 
+.user-table table{
+    --bs-table-bg:#f2f3f7;
+    --bs-table-hover-bg:#fff;
+   
+}
+
+.user-table table td,th,tr{
+    padding:15px;
+}

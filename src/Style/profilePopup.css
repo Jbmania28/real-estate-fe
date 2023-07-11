@@ -1,0 +1,14 @@
+.modal-header {
+align-items: start !important;
+justify-content: space-around;
+}
+
+#profile-footer .modal-footer{
+    justify-content:space-around !important;
+}
+
+.modal-footer .btn-primary{
+    --bs-btn-bg:rgb(4, 4, 229);
+    --bs-btn-hover-bg:rgb(4, 4, 229);
+    --bs-btn-padding-x:2rem
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../Style/login.css'
-import validation from '../LoginValidation';
+import validation from '../Validations/LoginValidation';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -24,7 +24,7 @@ export default function Login() {
   const handleClose =()=> setShow(false);
   const handleSubmit = (event) => {
     event.preventDefault();
-    debugger;
+   
     console.log(user);
     setErr(validation(user));
     if (err.email === "" && err.password === "") {
@@ -39,12 +39,13 @@ export default function Login() {
               localStorage.setItem("token", JSON.stringify(res.data.token));
               localStorage.setItem("username", res.data.data[0].fname)
               localStorage.setItem("id", res.data.data[0].id)
+              
               navigate('/');
             } else {
+              console.log("login response",res);
               setShow(true);
             }
           }
-
         })
         .catch(res => console.log(err))
     }
